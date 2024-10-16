@@ -14,9 +14,9 @@ function findLargestAndSmallest() {
         smallest = Math.min(num1, num2, num3);
 
        
-        document.getElementById('result').innerText = 
+        document.getElementById('result').innerHTML = 
             `Largest Number: ${largest}, Smallest Number: ${smallest}`;
     } else {
-        document.getElementById('result').innerText = "Please enter valid numbers.";
+        document.getElementById('result').innerHTML = "Please enter valid numbers.";
     }
 }

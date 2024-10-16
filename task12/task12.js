@@ -12,5 +12,5 @@ function checkEvenOdd() {
         resultText = "Please enter a valid number."; 
     }
 
-    document.getElementById('result').innerText = resultText; 
+    document.getElementById('result').innerHTML = resultText; 
 }

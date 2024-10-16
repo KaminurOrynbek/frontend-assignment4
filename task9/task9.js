@@ -8,8 +8,9 @@ function checkLeapYear() {
     }
     
     if (isLeapYear) {
-        document.getElementById('result').innerText = `${year} is a leap year.`;
+        document.getElementById('result').innerHTML = `${year} is a leap year.`;
     } else {
-        document.getElementById('result').innerText = `${year} is not a leap year.`;
+        document.getElementById('result').innerHTML = `${year} is not a leap year.`;
     }
 }
+
