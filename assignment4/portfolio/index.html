@@ -15,9 +15,31 @@
     <style>
         body {
             background-color: midnightblue;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            margin: 20px;
         }
         #features {
             margin: 112px;
+        }
+        nput {
+            margin: 10px 0;
+            padding: 10px;
+            width: 250px;
+        }
+        button {
+            padding: 10px;
+            background-color: #6c7ae0;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #5a67d9;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -50,12 +72,12 @@
 <section id="features">
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('Assets/stars.jpg');">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('../Assets/stars.jpg');">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                     <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><a href="#stars" style="color: white; text-decoration: none;">Stars</a></h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="me-auto">
-                            <img src="Assets/nasa-logo.CFKB7Wqh.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            <img src="../Assets/nasa-logo.CFKB7Wqh.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
                         </li>
                     </ul>
                 </div>
@@ -63,12 +85,12 @@
         </div>
 
         <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('Assets/SolarSystem.png');">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('../Assets/SolarSystem.png');">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                     <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><a href="#galaxies" style="color: white; text-decoration: none;">Galaxies</a></h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="me-auto">
-                            <img src="Assets/nasa-logo.CFKB7Wqh.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            <img src="../Assets/nasa-logo.CFKB7Wqh.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
                         </li>
                     </ul>
                 </div>
@@ -76,12 +98,12 @@
         </div>
 
         <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('Assets/blackhole.jpg');">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('../Assets/blackhole.jpg');">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                     <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><a href="#blackholes" style="color: white; text-decoration: none;">Black Holes</a></h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="me-auto">
-                            <img src="Assets/nasa-logo.CFKB7Wqh.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            <img src="../Assets/nasa-logo.CFKB7Wqh.svg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
                         </li>
                     </ul>
                 </div>
@@ -91,7 +113,7 @@
 </section>
 
 <!--Stars Section-->
-<section id="stars" style="background-image: url('Assets/starSection.jpg')">
+<section id="stars" style="background-image: url('../Assets/starSection.jpg')">
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
@@ -137,7 +159,7 @@
 
 
 <!--Galaxies Section-->
-<section id="galaxies" style="background-image: url('Assets/galaxy.jpg')">
+<section id="galaxies" style="background-image: url('../Assets/galaxy.jpg')">
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
@@ -167,7 +189,7 @@
             <h1 style="color: white">Our Milky Way</h1>
             <p style="color: white">Our home galaxy is called the Milky Way. It’s a spiral galaxy with a disk of stars spanning more than 100,000 light-years. Earth is located along one of the galaxy’s spiral arms, about halfway from the center. Our solar system takes about 240 million years to orbit the Milky Way just once.
             </p>
-            <img src="Assets/milkyway.jpg" alt="">
+            <img src="../Assets/milkyway.jpg" alt="">
             <p style="color: white">From our perspective on Earth, the Milky Way looks like a faint, milky band of light arcing across the entire sky, which is how it got its name. This feature marks the central disk of our home galaxy seen edge on.
             </p>
             <p style="color: white">The Milky Way sits in a neighborhood with over 50 other galaxies called the Local Group. Its members range in size from dwarf galaxies (smaller galaxies with up to a few billion stars) to Andromeda, our nearest large galactic neighbor.
@@ -178,7 +200,7 @@
 </section>
 
 <!--Black Holes-->
-<section id="blackholes" style="background-image: url('Assets/blackhole.jpg')">
+<section id="blackholes" style="background-image: url('../Assets/blackhole.jpg')">
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
@@ -275,6 +297,29 @@
     </div>
 </section>
 
+<!-- JavaScript -->
+<section>
+    <h1>Astronomy Calculations</h1>
 
+    <h2>1. Calculate Distance to Stars</h2>
+    <label for="parallaxAngle">Parallax Angle (arcseconds):</label>
+    <input type="number" id="parallaxAngle" min="0" step="0.01">
+    <button onclick="displayDistance()">Calculate Distance</button>
+    <div id="distanceResult" class="result"></div>
+
+    <h2>2. Estimate Star Age</h2>
+    <label for="mass">Mass (in solar masses):</label>
+    <input type="number" id="mass" min="0" step="0.01">
+    <button onclick="displayStarAge()">Estimate Age</button>
+    <div id="ageResult" class="result"></div>
+
+    <h2>3. Convert Light Years to Kilometers</h2>
+    <label for="lightYears">Distance (in light years):</label>
+    <input type="number" id="lightYears" min="0" step="0.01">
+    <button onclick="displayKilometers()">Convert Distance</button>
+    <div id="distanceConversionResult" class="result"></div>
+</section>
+
+<script src="main.js"></script>
 </body>
 </html>

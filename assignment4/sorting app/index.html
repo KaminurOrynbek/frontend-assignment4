@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Sorting Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 10px 0;
+    }
+    #result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Number Sorting Tool</h1>
+  
+  <!-- Input for number series -->
+  <label for="numbers">Enter numbers (comma-separated):</label>
+  <input type="text" id="numbers" placeholder="e.g., 10, 4, 6, 1, 15">
+
+  <!-- Dropdown to choose sorting order -->
+  <label for="order">Sort Order:</label>
+  <select id="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+  </select>
+
+  <!-- Button to trigger sorting -->
+  <button onclick="sortNumbers()">Sort</button>
+
+  <!-- Area to display result -->
+  <div id="result"></div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -6,13 +6,11 @@ function countVownCons(str) {
     const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
 
     for (let char of str) {
-        if (/[a-z]/.test(char)) { 
             if (vowels.has(char)) {
                 vowelCount++; 
             } else {
                 consonantCount++;
             }
-        }
     }
 
     return {
