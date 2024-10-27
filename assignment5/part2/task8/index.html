@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Sentences</title>
+</head>
+<body>
+    <h1>Split Sentences into Separate Lines</h1>
+    <p id="paragraph">
+        This is the first sentence. Here is the second one! And what about the third? Finally, we reach the end.
+    </p>
+    <button onclick="splitSentences()">Split Sentences</button>
+    <div id="result"></div>
+
+    <script>
+        function splitSentences() {
+
+            const paragraph = document.getElementById('paragraph').innerText;
+
+            const sentences = paragraph.split(/(?<=[.!?])\s+/);
+
+            const result = sentences.join('<br>');
+
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
