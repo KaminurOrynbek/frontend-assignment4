@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Words</title>
+    <style>
+        .italic {
+            font-style: italic;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Highlight Words in Paragraph</h1>
+    <p id="paragraph">Lorem ipsum dolor sity amet consectetur adipisicing elit. Illum recusandae soluta quaerat atque eum, maxime repellendus non accusamus minus dignissimos corrupti repudiandae et molestiae nihil. Debitis eum voluptates esse veniam!</p>
+    <button onclick="highlightWords()">Highlight Words</button>
+
+    <div id="result"></div>
+
+    <script>
+        function highlightWords() {
+    
+            const paragraph = document.getElementById('paragraph').innerText;
+            
+            const words = paragraph.split(' ');
+            
+            const modifiedWords = words.map(
+                word => {
+                if (word.toLowerCase().startsWith('a')) {
+                    return `<span class="italic">${word}</span>`; 
+                } else if (word.toLowerCase().endsWith('y')) {
+                    return `<span class="underline">${word}</span>`; 
+                } else {
+                    return word; 
+                }
+            });
+            
+            const highlightedText = modifiedWords.join(' ');
+            
+            document.getElementById('result').innerHTML = highlightedText;
+        }
+    </script>
+</body>
+</html>
