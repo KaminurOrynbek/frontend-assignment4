@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabetical Word Sorter</title>
+</head>
+<body>
+    <h1>Sort Words Alphabetically</h1>
+
+    <label for="inputText">Enter a sentence:</label>
+    <input type="text" id="inputText">
+    <button onclick="sortWords()">Sort Words</button>
+
+    <div id="result"></div>
+
+    <script>
+        function sortWords() {
+           
+            let text = document.getElementById('inputText').value;
+
+            let sortedWords = text.split(' ').map(
+                word => { return word.split('').sort().join('');})
+                .join(' ');
+
+            document.getElementById('result').innerHTML = 
+                `Sorted letters: ${sortedWords}`;
+        }
+    </script>
+</body>
+</html>
