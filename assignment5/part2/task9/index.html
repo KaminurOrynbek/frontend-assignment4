@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count</title>
+</head>
+<body>
+    <h1>Word Count</h1>
+    <p id="paragraph">This is an example paragraph to count the number of words.</p>
+    <button onclick="countWords()">Count Words</button>
+
+    <script>
+        function countWords() {
+           
+            const paragraph = document.getElementById('paragraph').innerText;
+         
+            const words = paragraph.split(' ');
+          
+            const wordCount = words.length;
+            
+            alert(`The number of words in the paragraph is: ${wordCount}`);
+        }
+    </script>
+</body>
+</html>
