@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Characters</title>
+</head>
+<body>
+    <h1>Replace Characters in a Paragraph</h1>
+    <p id="text">
+        What is your name? Are you excited to learn JavaScript! It’s going to be fun!
+    </p>
+    <button onclick="replaceCharacters()">Replace Characters</button>
+
+    <script>
+        function replaceCharacters() {
+    
+            const paragraph = document.querySelector('#text');
+
+            let modifiedText = paragraph.innerText
+                .replace(/\?/g, '*')
+                .replace(/!/g, '@'); 
+
+            paragraph.innerText = modifiedText;
+        }
+    </script>
+</body>
+</html>
