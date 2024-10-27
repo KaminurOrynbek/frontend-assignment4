@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest and Shortest String Finder</title>
+</head>
+<body>
+    <h1>Find Longest and Shortest String</h1>
+    <button onclick="findStrings()">Enter 3 Words</button>
+    <div id="result"></div>
+
+    <script>
+        function findStrings() {
+          
+            let word1 = prompt("Enter the first word:");
+            let word2 = prompt("Enter the second word:");
+            let word3 = prompt("Enter the third word:");
+
+            let words = [word1, word2, word3];
+
+            let longestWord = words[0];
+            let shortestWord = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (words[i].length > longestWord.length) {
+                    longestWord = words[i]; 
+                }
+                if (words[i].length < shortestWord.length) {
+                    shortestWord = words[i]; 
+                }
+            }
+
+            document.getElementById("result").innerHTML = 
+                `The longest word is: ${longestWord} <br> The shortest word is: ${shortestWord}`;
+        }
+    </script>
+</body>
+</html>
