@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Volume of a Prism (V = B * h; B = a * b)</h2>
+
+    <label for="lengthPrism">Length (a):</label>
+    <input type="number" id="lengthPrism">
+    <label for="widthPrism">Width (b):</label>
+    <input type="number" id="widthPrism">
+    <label for="heightPrism">Height (h):</label>
+    <input type="number" id="heightPrism">
+    <button onclick="calculatePrismVolume()">Calculate</button>
+
+    <div id="resultPrism"></div>
+
+    <script>
+        function calculatePrismVolume() {
+            const a = parseFloat(document.getElementById('lengthPrism').value);
+            const b = parseFloat(document.getElementById('widthPrism').value);
+            const h = parseFloat(document.getElementById('heightPrism').value);
+            const B = a * b;
+            const volume = B * h;
+            document.getElementById('resultPrism').innerText = `Volume of the Prism: ${volume.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
