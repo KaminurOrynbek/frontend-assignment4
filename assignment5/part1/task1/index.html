@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest and Farthest to 100</title>
+</head>
+<body>
+    <h1>Nearest and Farthest to 100</h1>
+
+    <label for="value1">Enter the number 1: </label>
+    <input type="number" id="value1">
+    <br>
+    
+    <label for="value2">Enter the number 2: </label>
+    <input type="number" id="value2">
+    <br>
+
+    <label for="value3">Enter the number 3: </label>
+    <input type="number" id="value3">
+    <br>
+
+    <button onclick="closeTo100()">Click</button>
+
+    <div id="result"></div>
+
+    <script>
+       function closeTo100() {
+           let value1 = parseFloat(document.getElementById('value1').value);
+           let value2 = parseFloat(document.getElementById('value2').value);
+           let value3 = parseFloat(document.getElementById('value3').value);
+
+           let target = 100;
+           let numbers = [value1, value2, value3];
+
+           if (numbers.every(num => num < target)) {
+               let nearest = numbers[0];
+               let farthest = numbers[0];
+               
+               for (let num of numbers) {
+                  
+                   if (Math.abs(target - num) < Math.abs(target - nearest)) {
+                       nearest = num;
+                   }
+                   
+                   if (Math.abs(target - num) > Math.abs(target - farthest)) {
+                       farthest = num;
+                   }
+               }
+               document.getElementById('result').innerHTML = `Nearest: ${nearest} <br> Farthest: ${farthest}`;
+           } else {
+               document.getElementById('result').innerHTML = `Invalid number. Please enter numbers less than ${target}.`;
+           }
+       }
+    </script>
+</body>
+</html>
