@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Area of a Triangle (S = ½ * b * h)</h2>
+
+    <label for="baseTriangle">Base (b):</label>
+    <input type="number" id="baseTriangle">
+    <label for="heightTriangle">Height (h):</label>
+    <input type="number" id="heightTriangle">
+    <button onclick="calculateTriangleArea()">Calculate</button>
+
+    <div id="resultTriangle"></div>
+    
+    <script>
+         function calculateTriangleArea() {
+            const b = parseFloat(document.getElementById('baseTriangle').value);
+            const h = parseFloat(document.getElementById('heightTriangle').value);
+            const area = 0.5 * b * h;
+            document.getElementById('resultTriangle').innerText = `Area of the Triangle: ${area.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
