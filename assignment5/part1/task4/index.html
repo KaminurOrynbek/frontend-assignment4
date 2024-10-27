@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Characters in String</title>
+</head>
+<body>
+    <h1>Replace Every Character</h1>
+
+    <label for="inputText">Enter a string:</label>
+    <input type="text" id="inputText">
+    <button onclick="replaceCharacters()">Replace Characters</button>
+
+    <div id="result"></div>
+
+    <script>
+        function replaceCharacters() {
+            let input = document.getElementById('inputText').value.toLowerCase(); 
+            let output = ''; 
+
+            for (let i = 0; i < input.length; i++) {
+                let char = input[i]; 
+
+                if (char === 'z') {
+                    output += 'a';
+                } 
+        
+                else {
+                    output += String.fromCharCode(char.charCodeAt(0) + 1);
+                }
+            }
+
+            document.getElementById('result').innerHTML = `Result: ${output}`;
+        }
+    </script>
+</body>
+</html>
