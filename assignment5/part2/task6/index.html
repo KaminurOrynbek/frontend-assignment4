@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Words</title>
+    <style>
+        .highlight {
+            background-color: blue;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Highlight Words in a Paragraph</h1>
+    <p id="text">
+        Lorem ip dolor sit amet consectetur adipisicing elit. Velit numquam dignissimos quas rem optio magnam! Facere similique quis veniam veritatis atque nostrum nisi placeat pariatur ducimus, eius qui repellat sapiente.
+    </p>
+    
+    <button onclick="highlightWords()">Highlight Words</button>
+
+    <script>
+        function highlightWords() {
+
+            const paragraph = document.querySelector('#text');
+
+            const words = paragraph.innerText.split(' ');
+
+        
+            const modifiedWords = words.map(
+                word => {
+                if (word.length > 7) {
+                    return `<span class="highlight">${word}</span>`;
+                } else if (word.length < 3) {
+                    return `<span class="bold">${word}</span>`;
+                } else {
+                    return word; 
+                }
+            });
+
+            paragraph.innerHTML = modifiedWords.join(' ');
+        }
+    </script>
+</body>
+</html>
