@@ -1,0 +1,25 @@
+body {
+    background-color:rgb(185, 23, 136);
+}
+
+#gameDiv {
+    border: 3px;
+    border-radius: 25px;
+    padding: 10px;
+    background-color:rgb(230, 173, 173);
+    text-align: center;
+    box-shadow: lightpink 0px 0px 50px 0px;
+}
+
+.choiceBtn {
+    line-height: 30px;
+    width: 150px;
+}
+
+#playerText {
+    color:rgb(255, 26, 141);
+}
+
+#computerText {
+    color:rgb(11, 11, 147)
+}
