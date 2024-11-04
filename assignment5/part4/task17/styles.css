@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgb(169, 129, 137);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem;
+}
+
+.container {
+    background-color: azure;
+    border-radius: 1rem;
+    width: 20rem;
+    margin: 0 auto;
+    box-shadow:darkgray 0px 10px 100px 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.container .month {
+    background-color: brown;
+    color:azure;
+    padding: 15px;
+    margin-bottom: 16px;
+    font-size: 32px;
+}
+
+.container .day {
+    opacity: 0.5;
+    font-size: 20px;
+}
+
+.container .date {
+    margin: 16px 0;
+    font-size: 120px;
+    font-weight: bold;
+}
+
+.container .year {
+    font-size: 20px;
+    opacity: 0.5;
+    padding-bottom: 16px;
+}
